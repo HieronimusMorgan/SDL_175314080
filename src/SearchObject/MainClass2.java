@@ -12,7 +12,7 @@ package SearchObject;
 public class MainClass2 {
 
     public static void main(String[] args) {
-        Atlet at[] = new Atlet[7];
+        Atlet at[] = new Atlet[8];
         at[0] = new Atlet("Sigit", 70);
         at[1] = new Atlet("Purwanto", 80);
         at[2] = new Atlet("Rudi", 75);
@@ -21,9 +21,64 @@ public class MainClass2 {
         at[5] = new Atlet("Gusti", 75);
         at[6] = new Atlet("Bambang", 95);
         at[7] = new Atlet("Agung", 85);
-        
-        Atlet otherAtlet = new Atlet("Joko", 95);
 
+        Atlet otherAtlet = new Atlet("Joko", 75);
+        System.out.println("============================");
+        System.out.println("Daftar Atlet Angkat Besi");
+        System.out.println("============================");
+        System.out.printf("%-5s", "No");
+        System.out.printf("%-11s", "Nama");
+        System.out.printf("%-15s", "Berat Badan");
+        System.out.println("");
+        System.out.println("---------------------------");
+        for (int i = 0; i < at.length; i++) {
+            System.out.printf("%-5s", i + 1);
+            System.out.printf("%-11s", at[i].getNama());
+            System.out.printf("%-15s", at[i].getBeratBadan());
+            System.out.println("");
+        }
+        System.out.println("---------------------------");
+
+        System.out.println("=================");
+        System.out.println("Atlet Pembanding");
+        System.out.println("=================");
+        System.out.printf("%-11s", otherAtlet.getNama());
+        System.out.printf("%-15s", otherAtlet.getBeratBadan());
+        System.out.println("");
+        System.out.println("-----------------");
+
+        System.out.println("===========================");
+        System.out.println("Memiliki Berat Sama");
+        System.out.println("===========================");
+        Atlet result = searchSama(at, otherAtlet);
+
+        System.out.println("-----------------");
+
+        System.out.println("===========================");
+        System.out.println("Memiliki Berat Lebih Besar");
+        System.out.println("===========================");
+        Atlet result1[] = searchLebihBesar(at, otherAtlet);
+        for (int i = 0; i < result1.length; i++) {
+            if (result1[i] != null) {
+                System.out.printf("%-11s", result1[i].getNama());
+                System.out.printf("%-15s", result1[i].getBeratBadan());
+                System.out.println("");
+            }
+        }
+        System.out.println("-----------------");
+
+        System.out.println("===========================");
+        System.out.println("Memiliki Berat Lebih Ringan");
+        System.out.println("===========================");
+        Atlet result2[] = searchLebihKecil(at, otherAtlet);
+        for (int i = 0; i < result2.length; i++) {
+            if (result2[i] != null) {
+                System.out.printf("%-11s", result2[i].getNama());
+                System.out.printf("%-15s", result2[i].getBeratBadan());
+                System.out.println("");
+            }
+        }
+        System.out.println("---------------------------");
     }
 
     public static Atlet searchSama(Atlet at[], Atlet a) {
@@ -31,16 +86,34 @@ public class MainClass2 {
         for (int i = 0; i < at.length; i++) {
             if (a.compareTo(at[i]) == 0) {
                 result = at[i];
-                System.out.println(a.getNama() + " Sama " + at[i].getNama());
-            } else if (a.compareTo(at[i]) > 0) {
-                result = at[i];
-                System.out.println(a.getNama() + " Lebih Besar " + at[i].getNama());
-            } else if (a.compareTo(at[i]) < 0) {
-                result = at[i];
-                System.out.println(a.getNama() + " Lebih Kecil " + at[i].getNama());
+                System.out.printf("%-11s", result.getNama());
+                System.out.printf("%-15s", result.getBeratBadan());
+                System.out.println("");
             }
         }
         return result;
     }
-    
+
+    public static Atlet[] searchLebihBesar(Atlet at[], Atlet a) {
+        Atlet result[] = new Atlet[at.length];
+        for (int i = 0; i < result.length; i++) {
+            if (a.compareTo(at[i]) < 0) {
+                result[i] = at[i];
+            }
+        }
+        return result;
+    }
+
+    public static Atlet[] searchLebihKecil(Atlet at[], Atlet a) {
+        Atlet result[] = new Atlet[at.length];
+        for (int i = 0; i < result.length; i++) {
+            if (a.compareTo(at[i]) > 0) {
+                result[i] = at[i];
+                System.out.printf("%-11s", result[i].getNama());
+                System.out.printf("%-15s", result[i].getBeratBadan());
+                System.out.println("");
+            }
+        }
+        return result;
+    }
 }

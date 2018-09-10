@@ -40,7 +40,6 @@ public class Atlet implements Comparable {
 
     @Override
     public int compareTo(Object o) {
-
         Atlet other = (Atlet) o;
         if (this.BeratBadan < other.getBeratBadan()) {
             return -1;

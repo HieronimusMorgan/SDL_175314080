@@ -9,7 +9,7 @@ package SearchObject;
  *
  * @author basisb29
  */
-public class Employee implements Comparable{
+public class Employee implements Comparable {
 
     private String lastName;
     private int salary;
@@ -37,10 +37,10 @@ public class Employee implements Comparable{
     public void setSalary(int salary) {
         this.salary = salary;
     }
-    
+
     @Override
     public int compareTo(Object o) {
-                
+
         Employee other = (Employee) o;
         if (this.salary < other.getSalary()) {
             return -1;
@@ -48,6 +48,7 @@ public class Employee implements Comparable{
         if (this.salary > other.getSalary()) {
             return 1;
         }
-        return 0; }
+        return 0;
+    }
 
 }
