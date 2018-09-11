@@ -1,5 +1,7 @@
+package Searching;
+
 /**
- * 
+ *
  */
 import java.util.Arrays;
 
@@ -10,19 +12,18 @@ import java.util.Arrays;
  */
 /**
  *
- * @author Aldy
+ * @author Morgan
  */
 public class Searching {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
         int[] data = {14, 42, 35, 26, 37, 20, 90, 76, 24, 36, 22, 34, 10};
         Arrays.sort(data);
+        
         for (int i = 0; i < 10; i++) {
             System.out.print(data[i] + " ");
         }
+        
         System.out.println("");
         System.out.println("Sequential Search");
         System.out.println(" Terdapat pada indeks ke " + sequentialSearch(data, 90));
