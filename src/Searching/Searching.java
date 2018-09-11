@@ -19,11 +19,12 @@ public class Searching {
     public static void main(String[] args) {
         int[] data = {14, 42, 35, 26, 37, 20, 90, 76, 24, 36, 22, 34, 10};
         Arrays.sort(data);
-        
-        for (int i = 0; i < 10; i++) {
+
+        System.out.println("Data Array");
+        for (int i = 0; i < data.length; i++) {
             System.out.print(data[i] + " ");
         }
-        
+
         System.out.println("");
         System.out.println("Sequential Search");
         System.out.println(" Terdapat pada indeks ke " + sequentialSearch(data, 90));
