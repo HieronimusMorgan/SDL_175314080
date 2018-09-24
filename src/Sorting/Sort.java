@@ -13,56 +13,58 @@ public class Sort {
 
     public static void main(String[] args) {
         int data[] = {4, 56, 87, 12, 36};
-        int data1[] = {4, 56, 87, 12, 36};
-        int data2[] = {4, 56, 87, 12, 36};
-        int data3[] = {4, 56, 87, 12, 36};
-        int data4[] = {4, 56, 87, 12, 36};
-        int data5[] = {4, 56, 87, 12, 36};
+        int dataBubble1[] = {4, 56, 87, 12, 36};
+        int dataBubble2[] = {4, 56, 87, 12, 36};
+        int dataSelection1[] = {4, 56, 87, 12, 36};
+        int dataSelection2[] = {4, 56, 87, 12, 36};
+        int dataInsertion1[] = {4, 56, 87, 12, 36};
+        int dataInsertion2[] = {4, 56, 87, 12, 36};
+
         System.out.println("Data Sebelum Diurutkan");
-        for (int i = 0; i < data.length; i++) {
+        for (int i = 0; i < dataBubble1.length; i++) {
             System.out.print(data[i] + " ");
         }
         System.out.println("");
+        System.out.println("");
         System.out.println("Bubble Sort Ascending");
-        BubbleSortAscending(data);
-        for (int i = 0; i < data.length; i++) {
-            System.out.print(data[i] + " ");
+        BubbleSortAscending(dataBubble1);
+        for (int i = 0; i < dataBubble1.length; i++) {
+            System.out.print(dataBubble1[i] + " ");
         }
         System.out.println("");
         System.out.println("Bubble Sort Descending");
-        BubbleSortDescending(data1);
-        for (int i = 0; i < data.length; i++) {
-            System.out.print(data1[i] + " ");
+        BubbleSortDescending(dataBubble2);
+        for (int i = 0; i < dataBubble1.length; i++) {
+            System.out.print(dataBubble2[i] + " ");
         }
-
+        System.out.println("");
         System.out.println("");
         System.out.println("Selection Sort Ascending");
-        SelectionSortAscending(data2);
-        for (int i = 0; i < data1.length; i++) {
-            System.out.print(data2[i] + " ");
+        SelectionSortAscending(dataSelection1);
+        for (int i = 0; i < dataBubble2.length; i++) {
+            System.out.print(dataSelection1[i] + " ");
         }
 
         System.out.println("");
         System.out.println("Selection Sort Descending");
-        SelectionSortDescending(data3);
-        for (int i = 0; i < data1.length; i++) {
-            System.out.print(data3[i] + " ");
+        SelectionSortDescending(dataSelection2);
+        for (int i = 0; i < dataBubble2.length; i++) {
+            System.out.print(dataSelection2[i] + " ");
         }
-
+        System.out.println("");
         System.out.println("");
         System.out.println("Insertion Sort Ascending");
-        InsertionSortAscending(data4);
-        for (int i = 0; i < data2.length; i++) {
-            System.out.print(data4[i] + " ");
+        InsertionSortAscending(dataInsertion1);
+        for (int i = 0; i < dataSelection1.length; i++) {
+            System.out.print(dataInsertion1[i] + " ");
         }
 
         System.out.println("");
         System.out.println("Insertion Sort Descending");
-        InsertionSortDescending(data5);
-        for (int i = 0; i < data2.length; i++) {
-            System.out.print(data5[i] + " ");
+        InsertionSortDescending(dataInsertion2);
+        for (int i = 0; i < dataSelection1.length; i++) {
+            System.out.print(dataInsertion2[i] + " ");
         }
-
     }
 
     public static int[] BubbleSortAscending(int a[]) {
