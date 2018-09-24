@@ -50,7 +50,7 @@ public class SortNilai {
             System.out.println("");
         }
 
-        System.out.println("\nBubble Sort Descending\n");
+        System.out.println("\nSelection Sort Descending\n");
         Mahasiswa[] nilai2 = new Mahasiswa[5];
         nilai2[0] = new Mahasiswa("Andi", 50);
         nilai2[1] = new Mahasiswa("Joko", 30);
@@ -118,5 +118,35 @@ public class SortNilai {
             }
         }
         return a;
+    }
+
+    public static Mahasiswa[] InsertionSortAscending(int[] list, Mahasiswa mahasiswa[]) {
+//        int holePosition = 0;
+//        Mahasiswa valueToInsert = new Mahasiswa();
+//        for (int i = 1; i < list.length; i++) {
+//            valueToInsert = mahasiswa[i];
+//            holePosition = i;
+//            while (holePosition > 0 && mahasiswa[holePosition - 1] > valueToInsert) {
+//                mahasiswa[holePosition] = mahasiswa[holePosition - 1];
+//                holePosition = holePosition - 1;
+//            }
+//            mahasiswa[holePosition] = valueToInsert;
+//        }
+        return mahasiswa;
+    }
+
+    public static int[] InsertionSortAscending(int[] list) {
+        int holePosition;
+        int valueToInsert;
+        for (int i = 1; i < list.length; i++) {
+            valueToInsert = list[i];
+            holePosition = i;
+            while (holePosition > 0 && list[holePosition - 1] > valueToInsert) {
+                list[holePosition] = list[holePosition - 1];
+                holePosition = holePosition - 1;
+            }
+            list[holePosition] = valueToInsert;
+        }
+        return list;
     }
 }
