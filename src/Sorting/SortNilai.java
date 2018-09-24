@@ -50,31 +50,31 @@ public class SortNilai {
             System.out.println("");
         }
 
-//        System.out.println("\nBubble Sort Descending\n");
-//        Nilai[] nilai2 = new Nilai[5];
-//        nilai2[0] = new Nilai("Andi", 50);
-//        nilai2[1] = new Nilai("Joko", 30);
-//        nilai2[2] = new Nilai("Rudi", 80);
-//        nilai2[3] = new Nilai("Anto", 20);
-//        nilai2[4] = new Nilai("Didi", 10);
-//
-//        System.out.printf("%-8s", "Nama");
-//        System.out.printf("%-5s", "Nilai\n");
-//        for (int i = 0; i < nilai2.length; i++) {
-//            System.out.printf("%-8s", nilai2[i].getNama());
-//            System.out.printf("%-5s", nilai2[i].getNilai());
-//            System.out.println("");
-//        }
-//
-//        BubbleSortDescending(nilai2);
-//        System.out.println("\nData Setelah Diurutkan\n");
-//        System.out.printf("%-8s", "Nama");
-//        System.out.printf("%-5s", "Nilai\n");
-//        for (int i = 0; i < nilai1.length; i++) {
-//            System.out.printf("%-8s", nilai2[i].getNama());
-//            System.out.printf("%-5s", nilai2[i].getNilai());
-//            System.out.println("");
-//        }
+        System.out.println("\nBubble Sort Descending\n");
+        Mahasiswa[] nilai2 = new Mahasiswa[5];
+        nilai2[0] = new Mahasiswa("Andi", 50);
+        nilai2[1] = new Mahasiswa("Joko", 30);
+        nilai2[2] = new Mahasiswa("Rudi", 80);
+        nilai2[3] = new Mahasiswa("Anto", 20);
+        nilai2[4] = new Mahasiswa("Didi", 10);
+
+        System.out.printf("%-8s", "Nama");
+        System.out.printf("%-5s", "Nilai\n");
+        for (int i = 0; i < nilai2.length; i++) {
+            System.out.printf("%-8s", nilai2[i].getNama());
+            System.out.printf("%-5s", nilai2[i].getNilai());
+            System.out.println("");
+        }
+
+        SelectionSortAscending(nilai2);
+        System.out.println("\nData Setelah Diurutkan\n");
+        System.out.printf("%-8s", "Nama");
+        System.out.printf("%-5s", "Nilai\n");
+        for (int i = 0; i < nilai2.length; i++) {
+            System.out.printf("%-8s", nilai2[i].getNama());
+            System.out.printf("%-5s", nilai2[i].getNilai());
+            System.out.println("");
+        }
     }
 
     public static Mahasiswa[] BubbleSortAscending(Mahasiswa nilai[]) {
@@ -103,4 +103,20 @@ public class SortNilai {
         return nilai;
     }
 
+    public static Mahasiswa[] SelectionSortAscending(Mahasiswa[] a) {
+        for (int i = 0; i < a.length - 1; i++) {
+            int min = i;
+            for (int j = i + 1; j < a.length; j++) {
+                if (a[j].compareTo(a[min]) < 0) {
+                    min = j;
+                }
+            }
+            if (min != i) {
+                Mahasiswa swap = a[min];
+                a[min] = a[i];
+                a[i] = swap;
+            }
+        }
+        return a;
+    }
 }
