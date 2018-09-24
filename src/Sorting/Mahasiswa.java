@@ -14,14 +14,26 @@ public class Mahasiswa implements Comparable {
     private String nama;
     private int nilai;
 
+    /**
+     * Constructor Empty
+     */
     public Mahasiswa() {
     }
 
+    /**
+     * Constructor with parameters
+     * @param nama String
+     * @param nilai Integer
+     */
     public Mahasiswa(String nama, int nilai) {
         this.nama = nama;
         this.nilai = nilai;
     }
 
+    /**
+     * method 
+     * @return Nama
+     */
     public String getNama() {
         return nama;
     }

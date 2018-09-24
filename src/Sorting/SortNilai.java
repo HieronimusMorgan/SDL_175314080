@@ -29,8 +29,18 @@ public class SortNilai {
             mahasiswa[i] = new Mahasiswa(nama, nilai);
             System.out.println("");
         }
-       
+        System.out.println("Bubble Sort Ascending");
         BubbleSortAscending(mahasiswa);
+        System.out.println("\nSorted By Nilai\n");
+        System.out.printf("%-8s", "Nama");
+        System.out.printf("%-5s", "Nilai\n");
+        for (int i = 0; i < mahasiswa.length; i++) {
+            System.out.printf("%-8s", mahasiswa[i].getNama());
+            System.out.printf("%-5s", mahasiswa[i].getNilai());
+            System.out.println("");
+        }
+        System.out.println("Bubble Sort Descending");
+        BubbleSortDescending(mahasiswa);
         System.out.println("\nSorted By Nilai\n");
         System.out.printf("%-8s", "Nama");
         System.out.printf("%-5s", "Nilai\n");
@@ -93,39 +103,4 @@ public class SortNilai {
         return nilai;
     }
 
-//    public static Nilai[] SelectionSortAscending(Nilai nilai[]) {
-//        Nilai min = new Nilai();
-//
-//        for (int i = 0; i < nilai.length - 1; i++) {
-//            min [i] = nilai[i];
-//            for (int j = i; j < nilai.length; j++) {
-//                if (nilai[j].compareTo(nilai[i]) > 0) {
-//                    nilai[i] = nilai[j];
-//                }
-//            }
-//            
-//            
-//            if (nilai[i] != nilai[i-1]) {
-//                Nilai swap = nilai[i];
-//                nilai[i] = nilai[i-1];
-//                nilai[i] = swap;
-//            }
-//        }
-//        return nilai;
-////        for (int i = 0; i < array.length - 1; i++) {
-////            Nilai min = array[i];
-////            for (int j = i + 1; j < array.length; j++) {
-////                if (array[j].compareTo(array[min]) < 0) {
-////                    min[i] = array[j];
-////                }
-////            }
-////            if (array[min] != i) {
-////                int swap = array[min];
-////                array[min] = array[i];
-////                array[i] = swap;
-////            }
-////        }
-////        return array;
-//
-//    }
 }
