@@ -39,7 +39,7 @@ public class Tugas2 {
         System.out.println("\n");
         System.out.println("Sorting Bubble Sort Ascending");
         System.out.println("====================================");
-        BubbleSortAscending(daftarAtlet);
+        InsertionSortAscending(daftarAtlet);
         System.out.printf("%-15s", "Negara");
         System.out.printf("%-15s", "Nama");
         System.out.printf("%-6s", "Waktu");
@@ -119,7 +119,7 @@ public class Tugas2 {
             Atlet valueToInsert = mahasiswa[i];
             holePosition = i;
             while (holePosition > 0
-                    && mahasiswa[holePosition - 1].compareTo(valueToInsert) < 0) {
+                    && mahasiswa[holePosition - 1].compareTo(valueToInsert) > 0) {
                 mahasiswa[holePosition] = mahasiswa[holePosition - 1];
                 holePosition = holePosition - 1;
             }
@@ -134,7 +134,7 @@ public class Tugas2 {
             Atlet valueToInsert = atlet[i];
             holePosition = i;
             while (holePosition > 0
-                    && atlet[holePosition - 1].compareTo(valueToInsert) > 0) {
+                    && atlet[holePosition - 1].compareTo(valueToInsert) < 0) {
                 atlet[holePosition] = atlet[holePosition - 1];
                 holePosition = holePosition - 1;
             }
