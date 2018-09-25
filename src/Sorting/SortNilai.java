@@ -66,7 +66,7 @@ public class SortNilai {
             System.out.println("");
         }
 
-        SelectionSortAscending(nilai2);
+        InsertionSortAscending(nilai2);
         System.out.println("\nData Setelah Diurutkan\n");
         System.out.printf("%-8s", "Nama");
         System.out.printf("%-5s", "Nilai\n");
@@ -120,33 +120,18 @@ public class SortNilai {
         return a;
     }
 
-    public static Mahasiswa[] InsertionSortAscending(int[] list, Mahasiswa mahasiswa[]) {
-//        int holePosition = 0;
-//        Mahasiswa valueToInsert = new Mahasiswa();
-//        for (int i = 1; i < list.length; i++) {
-//            valueToInsert = mahasiswa[i];
-//            holePosition = i;
-//            while (holePosition > 0 && mahasiswa[holePosition - 1] > valueToInsert) {
-//                mahasiswa[holePosition] = mahasiswa[holePosition - 1];
-//                holePosition = holePosition - 1;
-//            }
-//            mahasiswa[holePosition] = valueToInsert;
-//        }
-        return mahasiswa;
-    }
-
-    public static int[] InsertionSortAscending(int[] list) {
+    public static Mahasiswa[] InsertionSortAscending(Mahasiswa mahasiswa[]) {
         int holePosition;
-        int valueToInsert;
-        for (int i = 1; i < list.length; i++) {
-            valueToInsert = list[i];
+        for (int i = 1; i < mahasiswa.length; i++) {
+            Mahasiswa valueToInsert = mahasiswa[i];
             holePosition = i;
-            while (holePosition > 0 && list[holePosition - 1] > valueToInsert) {
-                list[holePosition] = list[holePosition - 1];
+            while (holePosition > 0
+                    && mahasiswa[holePosition - 1].compareTo(valueToInsert) > 0) {
+                mahasiswa[holePosition] = mahasiswa[holePosition - 1];
                 holePosition = holePosition - 1;
             }
-            list[holePosition] = valueToInsert;
+            mahasiswa[holePosition] = valueToInsert;
         }
-        return list;
+        return mahasiswa;
     }
 }
