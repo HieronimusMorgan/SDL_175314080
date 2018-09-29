@@ -21,8 +21,8 @@ public class Tugas1 {
         int dataInsertionDesc[] = {23, 43, 56, 1, 34, 89, 65, 4, 77, 56, 54, 33, 45, 23, 89, 76, 12, 67, 54, 8, 9, 44, 98, 100};
 
         System.out.println("Kumpulan Data Acak");
-        for (int i = 0; i < data.length; i++) {
-            System.out.print(data[i] + " ");
+        for (int i = 0; i < data.length -2; i++) {
+            System.out.print(i+1+" ");
         }
         System.out.println("\n");
 
@@ -70,6 +70,8 @@ public class Tugas1 {
     }
 
     /**
+     * Method pencarian bubble sort Ascending yaitu pencarian dari terkecil
+     * hingga terbesar
      *
      * @param array int
      * @return array
@@ -94,7 +96,7 @@ public class Tugas1 {
      */
     public static int[] BubbleSortDescending(int array[]) {
         for (int i = 0; i < array.length; i++) {
-            for (int j = 0; j < array.length -1; j++) {
+            for (int j = 0; j < array.length - 1; j++) {
                 if (array[j + 1] > array[j]) {
                     int swap = array[j];
                     array[j] = array[j + 1];

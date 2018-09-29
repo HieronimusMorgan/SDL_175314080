@@ -37,9 +37,9 @@ public class Tugas2 {
         }
 
         System.out.println("\n");
-        System.out.println("Sorting Bubble Sort Ascending");
+        System.out.println("Sorting Insertion Sort Descending");
         System.out.println("====================================");
-        InsertionSortAscending(daftarAtlet);
+        InsertionSortDescending(daftarAtlet);
         System.out.printf("%-15s", "Negara");
         System.out.printf("%-15s", "Nama");
         System.out.printf("%-6s", "Waktu");
@@ -53,79 +53,79 @@ public class Tugas2 {
         }
     }
 
-    public static Atlet[] BubbleSortAscending(Atlet nilai[]) {
-        for (int i = 0; i < nilai.length; i++) {
-            for (int j = 0; j < nilai.length - 1; j++) {
-                if (nilai[j + 1].compareTo(nilai[j]) < 0) {
-                    Atlet swap = nilai[j];
-                    nilai[j] = nilai[j + 1];
-                    nilai[j + 1] = swap;
+    public static Atlet[] BubbleSortAscending(Atlet atlet[]) {
+        for (int i = 0; i < atlet.length; i++) {
+            for (int j = 0; j < atlet.length - 1; j++) {
+                if (atlet[j + 1].compareTo(atlet[j]) < 0) {
+                    Atlet swap = atlet[j];
+                    atlet[j] = atlet[j + 1];
+                    atlet[j + 1] = swap;
                 }
             }
         }
-        return nilai;
+        return atlet;
     }
 
-    public static Atlet[] BubbleSortDescending(Atlet nilai[]) {
-        for (int i = 0; i < nilai.length; i++) {
-            for (int j = 0; j < nilai.length - 1; j++) {
-                if (nilai[j + 1].compareTo(nilai[j]) > 0) {
-                    Atlet swap = nilai[j];
-                    nilai[j] = nilai[j + 1];
-                    nilai[j + 1] = swap;
+    public static Atlet[] BubbleSortDescending(Atlet atlet[]) {
+        for (int i = 0; i < atlet.length; i++) {
+            for (int j = 0; j < atlet.length - 1; j++) {
+                if (atlet[j + 1].compareTo(atlet[j]) > 0) {
+                    Atlet swap = atlet[j];
+                    atlet[j] = atlet[j + 1];
+                    atlet[j + 1] = swap;
                 }
             }
         }
-        return nilai;
+        return atlet;
     }
 
-    public static Atlet[] SelectionSortAscending(Atlet[] a) {
-        for (int i = 0; i < a.length - 1; i++) {
+    public static Atlet[] SelectionSortAscending(Atlet[] atlet) {
+        for (int i = 0; i < atlet.length - 1; i++) {
             int min = i;
-            for (int j = i + 1; j < a.length; j++) {
-                if (a[j].compareTo(a[min]) < 0) {
+            for (int j = i + 1; j < atlet.length; j++) {
+                if (atlet[j].compareTo(atlet[min]) < 0) {
                     min = j;
                 }
             }
             if (min != i) {
-                Atlet swap = a[min];
-                a[min] = a[i];
-                a[i] = swap;
+                Atlet swap = atlet[min];
+                atlet[min] = atlet[i];
+                atlet[i] = swap;
             }
         }
-        return a;
+        return atlet;
     }
 
-    public static Atlet[] SelectionSortDescending(Atlet[] a) {
-        for (int i = 0; i < a.length - 1; i++) {
+    public static Atlet[] SelectionSortDescending(Atlet[] atlet) {
+        for (int i = 0; i < atlet.length - 1; i++) {
             int min = i;
-            for (int j = i + 1; j < a.length; j++) {
-                if (a[j].compareTo(a[min]) > 0) {
+            for (int j = i + 1; j < atlet.length; j++) {
+                if (atlet[j].compareTo(atlet[min]) > 0) {
                     min = j;
                 }
             }
             if (min != i) {
-                Atlet swap = a[min];
-                a[min] = a[i];
-                a[i] = swap;
+                Atlet swap = atlet[min];
+                atlet[min] = atlet[i];
+                atlet[i] = swap;
             }
         }
-        return a;
+        return atlet;
     }
 
-    public static Atlet[] InsertionSortAscending(Atlet mahasiswa[]) {
+    public static Atlet[] InsertionSortAscending(Atlet atlet[]) {
         int holePosition;
-        for (int i = 1; i < mahasiswa.length; i++) {
-            Atlet valueToInsert = mahasiswa[i];
+        for (int i = 1; i < atlet.length; i++) {
+            Atlet valueToInsert = atlet[i];
             holePosition = i;
             while (holePosition > 0
-                    && mahasiswa[holePosition - 1].compareTo(valueToInsert) > 0) {
-                mahasiswa[holePosition] = mahasiswa[holePosition - 1];
+                    && atlet[holePosition - 1].compareTo(valueToInsert) > 0) {
+                atlet[holePosition] = atlet[holePosition - 1];
                 holePosition = holePosition - 1;
             }
-            mahasiswa[holePosition] = valueToInsert;
+            atlet[holePosition] = valueToInsert;
         }
-        return mahasiswa;
+        return atlet;
     }
 
     public static Atlet[] InsertionSortDescending(Atlet atlet[]) {
