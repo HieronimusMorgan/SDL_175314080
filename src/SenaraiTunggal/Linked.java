@@ -20,9 +20,9 @@ public class Linked {
 
         int Jumlah = 0;
         for (int i = 0; i < TinggiBadan.size(); i++) {
-            Jumlah = (int) TinggiBadan.get(i) + Jumlah;
+            Jumlah += (int) TinggiBadan.get(i) ;
         }
-        int Rerata = Jumlah / TinggiBadan.size();
+        double Rerata = Jumlah / TinggiBadan.size();
         System.out.println(Rerata);
     }
 }
