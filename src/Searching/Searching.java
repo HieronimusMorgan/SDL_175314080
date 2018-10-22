@@ -4,6 +4,7 @@ package Searching;
  *
  */
 import java.util.Arrays;
+import java.util.LinkedList;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -19,7 +20,7 @@ public class Searching {
     public static void main(String[] args) {
         int[] data = {14, 42, 35, 26, 37, 20, 90, 76, 24, 36, 22, 34, 10};
         Arrays.sort(data);
-
+       
         System.out.println("Data Array");
         for (int i = 0; i < data.length; i++) {
             System.out.print(data[i] + " ");
