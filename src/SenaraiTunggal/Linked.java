@@ -9,20 +9,20 @@ import java.util.LinkedList;
 public class Linked {
 
     public static void main(String[] args) {
-        LinkedList daftarNama = new LinkedList();
+        LinkedList TinggiBadan = new LinkedList();
 
-        daftarNama.add(150);
-        daftarNama.add(185);
-        daftarNama.add(160);
-        daftarNama.add(168);
-        daftarNama.add(170);
-        daftarNama.add(150);
+        TinggiBadan.add(150);
+        TinggiBadan.add(185);
+        TinggiBadan.add(160);
+        TinggiBadan.add(168);
+        TinggiBadan.add(170);
+        TinggiBadan.add(150);
 
         int Jumlah = 0;
-        for (int i = 0; i < daftarNama.size(); i++) {
-            Jumlah = (int) daftarNama.get(i) + Jumlah;
+        for (int i = 0; i < TinggiBadan.size(); i++) {
+            Jumlah = (int) TinggiBadan.get(i) + Jumlah;
         }
-        int Rerata = Jumlah / daftarNama.size();
+        int Rerata = Jumlah / TinggiBadan.size();
         System.out.println(Rerata);
     }
 }
