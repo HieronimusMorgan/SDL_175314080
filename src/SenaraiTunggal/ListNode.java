@@ -7,7 +7,7 @@ package SenaraiTunggal;
 
 /**
  *
- * @author basisb29
+ * @author Hieronimus Fredy Morgan
  */
 public class ListNode {
     int data;

@@ -7,7 +7,7 @@ package SenaraiTunggal;
 
 /**
  *
- * @author basisb29
+ * @author Hieronimus Fredy Morgan
  */
 public class Test {
 
@@ -19,7 +19,7 @@ public class Test {
 
         ListNode node;
         while (!list.isEmpty()) {
-            node=list.removeTerakhir();
+            node=list.removePertama();
             System.out.println(node.getData());
         }
     }
