@@ -24,5 +24,9 @@ public class Linked {
         }
         double Rerata = Jumlah / TinggiBadan.size();
         System.out.println(Rerata);
+        
+        
     }
+    
+    
 }
