@@ -9,16 +9,16 @@ package Stack;
  *
  * @author Hieronimus Fredy Morgan / 175314080
  */
-public class Stack {
+public class StackStatis {
 
     int[] elemen;
     int front;
     int size;
 
-    public Stack() {
+    public StackStatis() {
     }
 
-    public Stack(int ukuran) {
+    public StackStatis(int ukuran) {
         elemen = new int[ukuran];
         size = ukuran;
         front = 0;

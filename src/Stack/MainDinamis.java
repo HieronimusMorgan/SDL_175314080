@@ -7,19 +7,18 @@ package Stack;
 
 /**
  *
- * @author basisb16
+ * @author basisb21
  */
-public class Main {
-
+public class MainDinamis {
     public static void main(String[] args) {
-        Stack a = new Stack(3);
+        StackDinamis a = new StackDinamis();
 
-        a.push(3);
-        a.push(4);
-        a.push(8);
-        while(!a.isEmpty()){
-            System.out.println(a.pop());
+        a.push(34);
+        a.push(42);
+        a.push(87);
+        while(!a.elemen.isEmpty()){
+            int b = a.pop();
+            System.out.println(b);
         }
-
     }
 }
