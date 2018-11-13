@@ -12,10 +12,18 @@ package Stack;
 public class MainDinamis {
     public static void main(String[] args) {
         StackDinamis a = new StackDinamis();
-
-        a.push(34);
-        a.push(42);
-        a.push(87);
+        
+        a.push(10);
+        a.push(20);
+        a.push(30);
+        a.push(40);
+        a.push(50);
+        a.push(60);
+        a.push(70);
+        a.push(80);
+        a.push(90);
+        a.push(100);
+        
         while(!a.elemen.isEmpty()){
             int b = a.pop();
             System.out.println(b);

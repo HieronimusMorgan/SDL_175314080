@@ -12,12 +12,20 @@ package Stack;
 public class MainStatis {
 
     public static void main(String[] args) {
-        StackStatis a = new StackStatis(3);
+        StackStatis a = new StackStatis(10);
 
-        a.push(3);
-        a.push(4);
-        a.push(8);
-        while(!a.isEmpty()){
+        a.push(10);
+        a.push(20);
+        a.push(30);
+        a.push(40);
+        a.push(50);
+        a.push(60);
+        a.push(70);
+        a.push(80);
+        a.push(90);
+        a.push(100);
+        
+        while (!a.isEmpty()) {
             System.out.println(a.pop());
         }
 

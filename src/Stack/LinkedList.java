@@ -5,7 +5,6 @@
  */
 package Stack;
 
-
 /**
  *
  * @author basisb27
@@ -41,55 +40,6 @@ public class LinkedList {
         int a = remove(head.getPrev());
         size--;
         return a;
-    }
-
-    public ListNode search(int data) {
-        ListNode c = head;
-        for (int i = 0; i < size; i++) {
-            c = c.getNext();
-            if (data == c.getElemen()) {
-                return c;
-            }
-        }
-        return head;
-    }
-
-    public int search1(int data) {
-        ListNode c = head;
-        int index = -1;
-        for (int i = 0; i < size; i++) {
-            c = c.getNext();
-            index++;
-            if (data == c.getElemen()) {
-                return index;
-            }
-        }
-        return -1;
-    }
-
-    public int get(int data) {
-        ListNode c = head;
-        int index = -1;
-        for (int i = 0; i < size; i++) {
-            c = c.getNext();
-            index++;
-            if (data == index) {
-                return c.getElemen();
-            }
-        }
-        return -1;
-    }
-
-    public double rata() {
-        LinkedList list = this;
-        int jumlah = this.getSize();
-        int total = 0;
-        while (!list.isEmpty()) {
-            total += list.removeFirst();
-        }
-        double rata;
-        return rata = total / jumlah;
-
     }
 
     private ListNode addBefore(int data, ListNode node) {
