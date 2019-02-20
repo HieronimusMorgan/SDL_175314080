@@ -42,9 +42,9 @@ public class LinkedList {
         return a;
     }
 
-    public ListNode search(int data) {
+    public ListNode searchElement(int data) {
         ListNode c = head;
-        for (int i = 0; i < size; i++) {
+        while (c.getNext() != head) {
             c = c.getNext();
             if (data == c.getElemen()) {
                 return c;
@@ -53,7 +53,7 @@ public class LinkedList {
         return head;
     }
 
-    public int search1(int data) {
+    public int searchIndex(int data) {
         ListNode c = head;
         int index = -1;
         for (int i = 0; i < size; i++) {
